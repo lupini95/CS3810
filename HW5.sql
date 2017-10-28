@@ -111,7 +111,7 @@ CREATE TABLE airlines(
 	airline_code VARCHAR(10),
 	PRIMARY KEY (airline_code));
 
--- city_codes
+-- travel_locations
 CREATE TABLE travel_locations(
 	city_name VARCHAR(100),
 	state_province_abr VARCHAR(10) REFERENCES states_provinces(state_province_abr),
@@ -119,6 +119,7 @@ CREATE TABLE travel_locations(
 	city_code VARCHAR(10),
 	PRIMARY KEY (city_code));
 
+-- booking_locations
 CREATE TABLE booking_locations(
 	city_name VARCHAR(100),
 	state_province_abr VARCHAR(10) REFERENCES states_provinces(state_province_abr),
